@@ -1,0 +1,19 @@
+{
+  "name": "algorithmsdatastructs",
+  "version": "1.0.0",
+  "description": "JavaScript algorithms and data structures ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alanpramuk9/JS.AlgorithmsDataStructures.git"
+  },
+  "author": "Alan Pramuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alanpramuk9/JS.AlgorithmsDataStructures/issues"
+  },
+  "homepage": "https://github.com/alanpramuk9/JS.AlgorithmsDataStructures#readme"
+}
