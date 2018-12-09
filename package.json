@@ -2,9 +2,18 @@
   "name": "algorithmsdatastructs",
   "version": "1.0.0",
   "description": "JavaScript algorithms and data structures ",
-  "main": "index.js",
+  "main": "./src/index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "jest --no-cache",
+    "build": "babel src --out-dir dist",
+    "start": "nodemon --exec babel-node ./aab.js",
+    "debug": "node --inspect-brk ./dist/index.js",
+    "babel-node": "babel-node --presets=/*a*/ --ignore='foo|bar|baz'"
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "/node_modules/(?!test-component).+\\.js$"
+    ]
   },
   "repository": {
     "type": "git",
@@ -17,7 +26,20 @@
   },
   "homepage": "https://github.com/alanpramuk9/JS.AlgorithmsDataStructures#readme",
   "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.0",
+    "@babel/node": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/register": "^7.0.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
+    "babel-jest": "^23.6.0",
     "chai": "^4.2.0",
-    "mocha": "^5.2.0"
+    "jest": "^23.6.0",
+    "mocha": "^5.2.0",
+    "regenerator-runtime": "^0.13.1"
+  },
+  "dependencies": {
+    "babel-core": "7.0.0-bridge.0",
+    "test-component": "file:test-component"
   }
 }
