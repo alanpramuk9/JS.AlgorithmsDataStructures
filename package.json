@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --no-cache",
     "build": "babel src --out-dir dist",
-    "start": "nodemon --exec babel-node ./aab.js",
+    "start": "nodemon --exec babel-node aab.js",
     "debug": "node --inspect-brk ./dist/index.js",
     "babel-node": "babel-node --presets=/*a*/ --ignore='foo|bar|baz'"
   },
