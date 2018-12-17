@@ -1,5 +1,6 @@
 /*
     Anagrams are words or phrases that contain the same number of characters
+    Ex. "Room" and "moor"
 */
 
 /*Approach 1
@@ -49,8 +50,6 @@ const sorter = string => string.replace(/\W/g, "").toLowerCase().split("").sort(
 const anagrams2 = (stringA, stringB) => sorter(stringA) === sorter(stringB);
 
 console.log(anagrams("Dormitory", "dirty room")) //true
-
-
 
 //unrelated. But count the number of vowels
 const vowels = string => {

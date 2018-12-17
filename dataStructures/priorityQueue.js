@@ -83,39 +83,30 @@ class PriorityQueue {
 } 
 
 
-// creating object for queue classs 
-var priorityQueue = new PriorityQueue(); 
+var priorityQueue = new PriorityQueue(); // creating object for queue classs 
   
 // testing isEmpty and front on an empty queue 
-// return true 
-console.log(priorityQueue.isEmpty()); 
+console.log(priorityQueue.isEmpty());  // return true 
   
-// returns "No elements in Queue" 
-console.log(priorityQueue.front()); 
+console.log(priorityQueue.front()); // returns "No elements in Queue" 
   
 // adding elements to the queue 
-priorityQueue.enqueue("Sumit", 2); 
-priorityQueue.enqueue("Gourav", 1); 
-priorityQueue.enqueue("Piyush", 1); 
-priorityQueue.enqueue("Sunny", 2); 
-priorityQueue.enqueue("Sheru", 3); 
+priorityQueue.enqueue("Alan", 2); 
+priorityQueue.enqueue("Meghan", 1); 
+priorityQueue.enqueue("Justin", 1); 
+priorityQueue.enqueue("Bobby", 2); 
+priorityQueue.enqueue("Hannah", 3); 
   
-// prints [Gourav Piyush Sumit Sunny Sheru] 
-console.log(priorityQueue.printPQueue()); 
+console.log(priorityQueue.printPQueue()); // prints [Meghan Justin Alan Bobby Hannah] 
   
-// prints Gourav 
-console.log(priorityQueue.front().element); 
+console.log(priorityQueue.front().element); // prints Meghan 
   
-// pritns Sheru 
-console.log(priorityQueue.rear().element); 
+console.log(priorityQueue.rear().element); // pritns Hannah 
   
-// removes Gouurav 
-// priorityQueue contains 
-// [Piyush Sumit Sunny Sheru] 
-console.log(priorityQueue.dequeue().element); 
+// removes Meghan
+console.log(priorityQueue.dequeue().element); //[Justin Alan Bobby Hannah] 
   
 // Adding another element to the queue 
-priorityQueue.enqueue("Sunil", 2); 
+priorityQueue.enqueue("Jane", 2); 
   
-// prints [Piyush Sumit Sunny Sunil Sheru] 
-console.log(priorityQueue.printPQueue()); 
+console.log(priorityQueue.printPQueue()); // prints [Justin Alan Bobby Jane Hannah] 

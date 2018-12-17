@@ -4,7 +4,7 @@
                      chunk([1, 2, 3, 4], 3) ----> [[1, 2, 3], [4]]
 */
 
-
+//1.
 function chunkArrayInGroups(arr, size) {
     let newArray = [];
     while(arr.length >= size) {
@@ -16,12 +16,12 @@ function chunkArrayInGroups(arr, size) {
     }
     
     return newArray;
-  }
-  
-  console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4)); //[ [ 0, 1, 2, 3 ], [ 4, 5 ] ]
-  console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2)); //[ [ 0, 1 ], [ 2, 3 ], [ 4, 5 ] ]
-  
-//basically the same thing
+}
+
+console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4)); //[ [ 0, 1, 2, 3 ], [ 4, 5 ] ]
+console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2)); //[ [ 0, 1 ], [ 2, 3 ], [ 4, 5 ] ]
+
+//2.
 const chunk = (array, size) => {
     const chunks = [];
     let index = 0;
@@ -35,7 +35,7 @@ const chunk = (array, size) => {
 
 console.log(chunk([0, 1, 2, 3, 4, 5], 4)); //[ [ 0, 1, 2, 3 ], [ 4, 5 ] ]
 
-
+//3,
 //less elegant: keep a reference to the last “chunk” and check its size as we loop through the array items
 const chunker = (array, size) => {
     const chunks = [];

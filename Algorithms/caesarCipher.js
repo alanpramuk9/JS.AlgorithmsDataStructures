@@ -4,6 +4,7 @@
 
 */
 
+//1.
 const caesarCipher = (string, number) => {
     //alphabet characters in order to calculate the result of shifting a character
     const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
@@ -12,7 +13,6 @@ const caesarCipher = (string, number) => {
 
     for (let i = 0; i < input.length; i++) {
         const letter = input[i];
-
 
         if (alphabet.indexOf(letter) === -1) {
             output += letter;
@@ -33,8 +33,9 @@ const caesarCipher = (string, number) => {
 
     return output;
 };
+console.log(caesarCipher("hello world", 2))
 
-
+//2.
 function caesarCipher2(str, n) {
     let result = Array(str.length);
     for (let i = 0; i < str.length; i++) {
@@ -49,3 +50,5 @@ function caesarCipher2(str, n) {
     }
     return result.join("");
 }
+
+console.log(caesarCipher2("hello world", 2))

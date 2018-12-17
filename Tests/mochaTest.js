@@ -1,5 +1,5 @@
 //to use- change package.json value of "test" to mocha. Then run npm mocha
-let reverse = require('./Algorithms/reverse')
+let reverse = require('../src/Algorithms/reverse')
 
 // Require the built in 'assertion' library
 var assert = require('assert');
