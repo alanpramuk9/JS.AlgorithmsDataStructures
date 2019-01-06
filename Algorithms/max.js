@@ -1,3 +1,8 @@
+/*
+    Find the largest number in an array
+    
+*/
+
 function myArrayMax(arr) {
     var len = arr.length
     var max = -Infinity;
@@ -9,8 +14,10 @@ function myArrayMax(arr) {
     return max;
 }
 
+console.log(myArrayMax([5,2,1,99,4])) //99
 
-//finding min 
+
+//finding minimum number in array
 function myArrayMin(arr) {
     var len = arr.length
     var min = Infinity;
@@ -21,20 +28,3 @@ function myArrayMin(arr) {
     }
     return min;
 }
-
-// sorting object arrays
-var cars = [
-    {type:"Volvo", year:2016},
-    {type:"Saab", year:2001},
-    {type:"BMW", year:2010}];
-
-cars.sort(function(a, b){return a.year - b.year});
-
-//comparing with strings
-cars.sort(function(a, b){
-    var x = a.type.toLowerCase();
-    var y = b.type.toLowerCase();
-    if (x < y) {return -1;}
-    if (x > y) {return 1;}
-    return 0;
-});

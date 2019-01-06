@@ -7,18 +7,17 @@
 
 //1. Iterative approach
 function factorialize(num) {
+  //watch out for edge cases where number is 0 or 1
   if (num === 0 || num === 1)
     return 1;
-  //let product = 1;
+  let product = 1;
   for (let x = 1; x <= num; x++) {
-    num *= x;
+    product *= x;
     //console.log(product); shows the sum of the products through each iteration
   }
-  return num;
+  return product;
 }
-console.log(factorialize(3));
-
-
+console.log(factorialize(3)); //6 
 
 //2. Recursive approach
 function factorRecursion(num) {
@@ -27,4 +26,4 @@ function factorRecursion(num) {
   return num * factorRecursion(num-1);
 }
 
-//console.log(factorRecursion(5));
+console.log(factorRecursion(4)); //24 

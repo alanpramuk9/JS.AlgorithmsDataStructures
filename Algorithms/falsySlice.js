@@ -1,3 +1,9 @@
+/*
+    return the truthy values of an array
+        -because of JavaScript's type coersion, items like 0, Nan, undefined, "" are falsy
+*/
+
+
 function bouncer(arr) {
     let newestArray = [];
     for(let x =0; x < arr.length; x++) {
@@ -17,4 +23,4 @@ function bouncer(arr) {
 
   }
 
-  console.log(bouncer2([7, "ate", "", false, 9]));
+  console.log(bouncer2([7, "ate", "",undefined, 0, 1, NaN, false, ])); //[ 7, 'ate', 1 ]

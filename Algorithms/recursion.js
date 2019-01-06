@@ -1,11 +1,8 @@
 let countdownFrom = num => {
     if(num===0) {return 0};
-    console.log(num);
     countdownFrom(num-1);
-    
 }
 
-//ountdownFrom(10);
 console.log(countdownFrom(10));
 
 /*

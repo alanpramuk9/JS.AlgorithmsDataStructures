@@ -1,3 +1,10 @@
+/* 
+  Find the longest word in a string
+    Ex. "I love JavaScript"
+      returns 'JavaScript'
+*/
+
+
 
 //1. returns the length of the longest word
 function findLongestWordLength(str) {
@@ -5,27 +12,37 @@ function findLongestWordLength(str) {
     let longestWord = 0;
     let index = 0;
     for(let i =0; i < newArray.length; i++) {
-        let x = newArray[i].length;
+        let x = newArray[i].length; //this is the length of the word being iterated over
         if (x > longestWord) {
             longestWord = x;
-            index = i; //so that we can grab index later;
+            index = i; //just in case we want to grab index later of the word in the array later;
         }
     }
     //return the word not the length of the longest word
     let stringWord = newArray[index];
     return stringWord;
 }
-findLongestWordLength("The quick brown fox jumped over the lazy dog");
+console.log(findLongestWordLength("The quick brown fox jumped over the lazy dog")); //jumped
 
 
-//2. USING REDUCE
+//2a USING REDUCE 
+function findLongestWord2(str) {
+  var longestWord = str.split(' ').reduce(function(longest, currentWord) {
+    return currentWord.length > longest.length ? currentWord : longest;
+  }, "");
+  return longestWord.length;
+}
+console.log(findLongestWord2("The quick brown fox jumped over the lazy dog"));
+
+//2b. USING REDUCE and Math.max
 function findLongestWordLength2(s) {
     return s.split(' ')
-      .reduce(function(x, y) {
-        return Math.max(x, y.length)
+      .reduce(function(longest, currentWord) {
+        //returns the length of the longest word
+        return Math.max(longest, currentWord.length)
       }, 0); //gives the initial value of x to 0 so that Math.max knows where to start
 }
-console.log(findLongestWordLength2("The quick brown fox jumped over the lazy dog"));
+console.log(findLongestWordLength2("The quick brown fox jumped over the lazy dog")); //6
 
 
 //3. USING RECURSION
@@ -54,3 +71,11 @@ function findLongestWordLength3(str) {
     }
   }
   console.log(findLongestWordLength3("The quick brown fox jumped over the lazy dog"));
+
+
+//4. Could also use Sort() method
+function findLongestWord4(str) {
+  var longestWord = str.split(' ').sort(function(a, b) { return b.length - a.length; });
+  return longestWord[0].length;
+}
+console.log(findLongestWord4("The quick brown fox jumped over the lazy dog"));

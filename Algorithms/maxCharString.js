@@ -2,10 +2,12 @@
     Find the character that appears most often in a string
 */
 
-//
+//1.
 const max = string => {
+    //hash map object that we will populate and then index through to find the character with greatest number
     const characters = {};
 
+    //first create a character hash table of the string
     for (let character of string) {
         if(characters[character]){
             characters[character]++;
@@ -29,7 +31,7 @@ const max = string => {
 
 console.log(max("Hello")); // l
 
-//functional way
+//functional way. Looks very obfuscated...
 function getMostRepeatedCharacter(string) {
     return string.split('').reduce((acc,char)=>{
         let len = string.split(char).length - 1;
@@ -64,7 +66,8 @@ function solution(N) {
     return res.name+':'+res.value
 }
 
-solution("hello world");
+;
+console.log(solution("hello world"));
 
 
 

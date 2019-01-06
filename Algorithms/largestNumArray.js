@@ -11,17 +11,13 @@ function largestOfFour(arr) {
       let sortedArray = arr[i].sort(function(a,b) {return a-b} );
       //let high = sortedArray.slice(-1);// would create an array of the value at each index
       let high = sortedArray.pop();
-      maxNum.push(high);
-      
+      maxNum.push(high); 
     }
     return maxNum;
   }
   
   console.log(largestOfFour([[13, 27, 18, 26], [4, 5, 1, 3], [32, 35, 37, 39], [1000, 1001, 857, 1]]))
   console.timeEnd("x");
-
-
-
 
 //2.  alternative approach
   function myArrayMax2(arr) {
@@ -37,10 +33,7 @@ function largestOfFour(arr) {
 
 // // myArrayMax2([-7,1,5,3]);
   console.log(myArrayMax2([[17, 23, 25, 12], [25, 7, 34, 48], [4, -10, 18, 21], [-72, -3, -17, -10]]));
-
-
-
-
+  
 //3. procedural approach
 console.time("y");
 function largestOfFive(arr) {
